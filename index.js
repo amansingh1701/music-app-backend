@@ -61,25 +61,25 @@ function getNotes(hslArr) {
   if (0 <= hslArr[0] && hslArr[0] <= 29) {
     notes.push("F4");
   } else if (30 <= hslArr[0] && hslArr[0] <= 59) {
-    notes.push("F#4");
+    notes.push("F4");
   } else if (60 <= hslArr[0] && hslArr[0] <= 89) {
     notes.push("G4");
   } else if (90 <= hslArr[0] && hslArr[0] <= 119) {
-    notes.push("G#4");
+    notes.push("Gs4");
   } else if (120 <= hslArr[0] && hslArr[0] <= 149) {
     notes.push("A4");
   } else if (150 <= hslArr[0] && hslArr[0] <= 179) {
-    notes.push("A#4");
+    notes.push("As4");
   } else if (180 <= hslArr[0] && hslArr[0] <= 209) {
     notes.push("B4");
   } else if (210 <= hslArr[0] && hslArr[0] <= 239) {
     notes.push("C5");
   } else if (240 <= hslArr[0] && hslArr[0] <= 269) {
-    notes.push("C#5");
+    notes.push("Cs5");
   } else if (270 <= hslArr[0] && hslArr[0] <= 299) {
     notes.push("D5");
   } else if (300 <= hslArr[0] && hslArr[0] <= 329) {
-    notes.push("D#5");
+    notes.push("Ds5");
   } else if (330 <= hslArr[0] && hslArr[0] <= 359) {
     notes.push("E5");
   }
