@@ -114,7 +114,10 @@ server.get("/getImage", (req, res) => {
 });
 
 const corsOptions = {
-  origin: ["http://127.0.0.1:5501"],
+  origin: [
+    "http://127.0.0.1:5501",
+    "https://stellar-hotteok-ee8d14.netlify.app",
+  ],
   methods: ["GET", "PUT", "POST"],
   credentials: true,
 };
