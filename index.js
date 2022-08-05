@@ -4,6 +4,7 @@ const server = express();
 const getColors = require("get-image-colors");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 5001;
 
 server.use(cors());
 server.use(bodyParser.json({ limit: "10mb" }));
@@ -99,6 +100,24 @@ server.get("/getPalette", (req, res) => {
   res.json({ palette });
 });
 
-server.listen("5001", () => {
-    console.log(`Server running at http://localhost:5000`);
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:5001`);
+});
+
+// var publicDir = path.join(__dirname, "out.jpeg");
+// server.use(express.static(publicDir)); 
+// server.use(express.static("./"));
+// server.use("./");
+app.get("/", function (req, res) {
+  console.log("File Sent");
+  res.send();
+});
+server.get("/getImage", (req, res) => {
+  res.sendFile(__dirname + "/out.jpeg", function (err) {
+    if (err) {
+      next(err);
+    } else {
+      console.log("Sent:", fileName);
+    }
+  });
 });
