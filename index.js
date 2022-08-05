@@ -6,7 +6,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 5001;
 
-server.use(cors());
 server.use(bodyParser.json({ limit: "10mb" }));
 server.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
 
@@ -117,9 +116,7 @@ const corsOptions = {
   origin: [
     "http://127.0.0.1:5501",
     "https://stellar-hotteok-ee8d14.netlify.app",
-  ],
-  methods: ["GET", "PUT", "POST"],
-  credentials: true,
+  ]
 };
 
 server.use(cors(corsOptions));
