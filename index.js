@@ -116,7 +116,8 @@ const corsOptions = {
   origin: [
     "http://127.0.0.1:5501",
     "https://stellar-hotteok-ee8d14.netlify.app",
-  ]
+  ],
+  methods: ["GET", "PUT", "POST"],
 };
 
 server.use(cors(corsOptions));
