@@ -6,7 +6,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 5001;
 
-server.use(function (req, res, next) {
+server.use(function (req, res) {
   // Website you wish to allow to connect
   res.setHeader(
     "Access-Control-Allow-Origin",
@@ -28,9 +28,6 @@ server.use(function (req, res, next) {
   // Set to true if you need the website to include cookies in the requests sent
   // to the API (e.g. in case you use sessions)
   res.setHeader("Access-Control-Allow-Credentials", true);
-
-  // Pass to next layer of middleware
-  next();
 });
 server.use(bodyParser.json({ limit: "10mb" }));
 server.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
