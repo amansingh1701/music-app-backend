@@ -103,15 +103,6 @@ server.get("/getPalette", (req, res) => {
 server.listen(port, () => {
   console.log(`Server running at http://localhost:5001`);
 });
-
-// var publicDir = path.join(__dirname, "out.jpeg");
-// server.use(express.static(publicDir)); 
-// server.use(express.static("./"));
-// server.use("./");
-app.get("/", function (req, res) {
-  console.log("File Sent");
-  res.send();
-});
 server.get("/getImage", (req, res) => {
   res.sendFile(__dirname + "/out.jpeg", function (err) {
     if (err) {
