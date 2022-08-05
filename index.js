@@ -8,7 +8,10 @@ const port = process.env.PORT || 5001;
 
 server.use(function (req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://stellar-hotteok-ee8d14.netlify.app"
+  );
 
   // Request methods you wish to allow
   res.setHeader(
