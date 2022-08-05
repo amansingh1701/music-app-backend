@@ -6,7 +6,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 5001;
 
-server.use(function (req, res) {
+server.use(function (req, res,next) {
   // Website you wish to allow to connect
   res.setHeader(
     "Access-Control-Allow-Origin",
