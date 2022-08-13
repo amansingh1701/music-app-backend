@@ -12,7 +12,6 @@ const port = process.env.PORT || 5001;
 //     "Access-Control-Allow-Origin",
 //     "*"
 //   );
-
   // Request methods you wish to allow
   // res.setHeader(
   //   "Access-Control-Allow-Methods",
