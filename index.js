@@ -5,7 +5,6 @@ const getColors = require("get-image-colors");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 5001;
-import Cors from cors;
 
 // server.use(function (req, res,next) {
 //   // Website you wish to allow to connect
@@ -38,7 +37,7 @@ import Cors from cors;
 //   ],
 //   methods: ["GET", "PUT", "POST"],
 // };
-server.use(Cors());
+server.use(cors());
 server.use(bodyParser.json({ limit: "10mb" }));
 server.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
 
