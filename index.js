@@ -137,7 +137,7 @@ server.listen(port, () => {
 server.get("/getImage", (req, res) => {
   res.sendFile(__dirname + "/out.jpeg", function (err) {
     if (err) {
-      next(err);
+      // next(err);
     } else {
       console.log("Sent:");
     }
