@@ -132,7 +132,7 @@ server.get("/getPalette", (req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Server running at http://localhost:5001`);
+  console.log(`Server running at http://localhost:${port}`);
 });
 
 server.get("/getImage", (req, res) => {
